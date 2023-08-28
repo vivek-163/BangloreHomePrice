@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Banglore Home Price Prediction</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+	<script src="https://kit.fontawesome.com/1e3d6ebb09.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div id="header">
+		<div class="container">
+			<nav>
+				<img src="images/logo.jpeg" class="logo">
+				<ul id="sidemenu">
+					<li><a href="#header">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#Check_Price">Check_Price</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+				</ul>
+				<i class="fa-solid fa-bars" onclick="openmenu()"></i>
+			</nav>
+			<div class="header-text">
+				<p>Data Science Project</p>
+				<h1><span>Real Estate</span><br>Price Prediction</h1>
+
+			</div>
+		</div>
+	</div>
+	<div id="about">
+		<div class="container">
+			<div class="row">
+				<div class="about-col-1">
+					<img src="images/about.jpg">
+				</div>
+				<div class="about-col-2">
+					<h1 class="subtitle">About Project</h1>
+					<p>
+						The "Real Estate Price Prediction Using Data Science" project aims to leverage data analysis and
+						machine learning techniques to develop an accurate and reliable model for predicting real estate
+						property prices. In an ever-evolving real estate market, having the ability to predict property
+						prices with precision can offer significant advantages to buyers, sellers, investors, and real
+						estate professionals. This project seeks to address this need by combining data-driven insights
+						and advanced predictive modeling.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="Check_Price">
+		<form class="form">
+			<h2>Area (Square Feet)</h2>
+			<input class="area" type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+			<h2>BHK</h2>
+			<div class="switch-field">
+				<input type="radio" id="radio-bhk-1" name="uiBHK" value="1" />
+				<label for="radio-bhk-1">1</label>
+				<input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked />
+				<label for="radio-bhk-2">2</label>
+				<input type="radio" id="radio-bhk-3" name="uiBHK" value="3" />
+				<label for="radio-bhk-3">3</label>
+				<input type="radio" id="radio-bhk-4" name="uiBHK" value="4" />
+				<label for="radio-bhk-4">4</label>
+				<input type="radio" id="radio-bhk-5" name="uiBHK" value="5" />
+				<label for="radio-bhk-5">5</label>
+			</div>
+		</form>
+		<form class="form">
+			<h2>Bath</h2>
+			<div class="switch-field">
+				<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1" />
+				<label for="radio-bath-1">1</label>
+				<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked />
+				<label for="radio-bath-2">2</label>
+				<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3" />
+				<label for="radio-bath-3">3</label>
+				<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4" />
+				<label for="radio-bath-4">4</label>
+				<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5" />
+				<label for="radio-bath-5">5</label>
+			</div>
+			<h2>Location</h2>
+			<div>
+				<select class="location" name="" id="uiLocations">
+					<option value="" disabled="disabled" selected="selected">Choose a Location</option>
+					<option>Electronic City</option>
+					<option>Rajaji Nagar</option>
+				</select>
+			</div>
+			<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+			<div id="uiEstimatedPrice" class="result">
+				<h2></h2>
+			</div>
+			
+	</div>
+	<div id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact-left">
+					<h1 class="sub-title">Contact Us</h1>
+					<p><i class="fa-sharp fa-solid fa-paper-plane"></i>abcBuilder@gmail.com</p>
+					<p><i class="fa-solid fa-square-phone"></i>77xx97xx66</p>
+					<div class="social-icons">
+						<a href=""><i class="fa-brands fa-instagram"></i></a>
+						<a href=""><i class="fa-brands fa-twitter-square"></i></a>
+						<a href=""><i class="fa-brands fa-linkedin"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+        var sidemenu= document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right= "0";
+        }
+        function closemenu(){
+            sidemenu.style.right= "-200px";
+        }
+    </script>
+</body>
+
+
+</html>
+
